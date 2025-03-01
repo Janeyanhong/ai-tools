@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具集 - 让创作更简单</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>AI工具集</h1>
+            <p class="subtitle">让创作更简单，让思维更清晰</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="tools-grid">
+                <!-- 思维导图工具 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="images/mindmap-icon.svg" alt="思维导图图标">
+                    </div>
+                    <h2>一键生成思维导图</h2>
+                    <p>快速将文本转换为结构化的思维导图，帮助理解和记忆</p>
+                    <ul class="features">
+                        <li>自动识别文本层级结构</li>
+                        <li>支持多种导图样式</li>
+                        <li>一键导出多种格式</li>
+                    </ul>
+                    <button onclick="showDemo('mindmap')">查看演示</button>
+                </div>
+
+                <!-- PPT工具 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="images/ppt-icon.svg" alt="PPT图标">
+                    </div>
+                    <h2>一键生成PPT</h2>
+                    <p>输入大纲或文本，快速生成专业美观的PPT演示文稿。</p>
+                    <ul>
+                        <li>智能排版布局</li>
+                        <li>自动配图配色</li>
+                        <li>多种主题模板</li>
+                    </ul>
+                    <button onclick="showDemo('ppt')">查看演示</button>
+                </div>
+
+                <!-- 流程图工具 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="images/flowchart-icon.svg" alt="流程图图标">
+                    </div>
+                    <h2>一键生成流程图</h2>
+                    <p>描述业务流程，自动生成标准清晰的流程图，提高工作效率。</p>
+                    <ul>
+                        <li>支持多种图形标准</li>
+                        <li>自动布局对齐</li>
+                        <li>一键导出文件</li>
+                    </ul>
+                    <button onclick="showDemo('flowchart')">查看演示</button>
+                </div>
+
+                <!-- Prompt工具 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="images/prompt-icon.svg" alt="Prompt图标">
+                    </div>
+                    <h2>Prompt提示词优化</h2>
+                    <p>优化AI提示词，获得更精准的AI回复，提高AI创作效率。</p>
+                    <ul>
+                        <li>智能补全提示词</li>
+                        <li>场景化模板推荐</li>
+                        <li>提示词优化建议</li>
+                    </ul>
+                    <button onclick="showDemo('prompt')">查看演示</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 演示模态框 -->
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeDemo()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AI工具集. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

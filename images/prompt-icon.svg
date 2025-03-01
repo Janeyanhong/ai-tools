@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- 对话框背景 -->
+    <rect x="10" y="20" width="80" height="60" rx="10" fill="#003B90"/>
+    <!-- 对话框尾部 -->
+    <path d="M 30 80 L 40 90 L 50 80" fill="#003B90"/>
+    <!-- 提示符号 -->
+    <text x="50" y="55" font-family="Arial" font-size="24" fill="white" text-anchor="middle">/></text>
+    <!-- 光标闪烁效果 -->
+    <rect x="60" y="40" width="3" height="20" fill="#E60012">
+        <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- 装饰圆点 -->
+    <circle cx="25" cy="35" r="3" fill="#0066CC"/>
+    <circle cx="35" cy="35" r="3" fill="#0066CC"/>
+    <circle cx="45" cy="35" r="3" fill="#0066CC"/>
+</svg>
