@@ -12,7 +12,7 @@ function showDemo(toolType) {
                 <div class="mindmap-demo">
                     <p>这是基于培训内容自动生成的思维导图示例，展示了AI工具的基本使用方法、注意事项和最佳实践。</p>
                     <div class="mindmap-content">
-                        <img src="/ai-tools/mindmap-demo/page2.SVG" alt="AI工具使用说明思维导图 - 第2页" onerror="handleImageError(this)">
+                        <img src="/ai-tools/mindmap-demo/page2.svg" alt="AI工具使用说明思维导图 - 第2页" onerror="handleImageError(this)">
                         <img src="/ai-tools/mindmap-demo/page3.SVG" alt="AI工具使用说明思维导图 - 第3页" onerror="handleImageError(this)">
                         <img src="/ai-tools/mindmap-demo/page4.SVG" alt="AI工具使用说明思维导图 - 第4页" onerror="handleImageError(this)">
                         <img src="/ai-tools/mindmap-demo/page5.SVG" alt="AI工具使用说明思维导图 - 第5页" onerror="handleImageError(this)">
