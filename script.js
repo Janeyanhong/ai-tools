@@ -100,3 +100,137 @@ document.addEventListener('keydown', function(event) {
         closeDemo();
     }
 });
+
+// 修改 showPromptSamples 函数
+function showPromptSamples() {
+    const modal = document.getElementById('demo-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    
+    modalTitle.textContent = 'Prompt咒语百宝箱';
+    
+    // 直接在模态框中显示内容
+    modalBody.innerHTML = `
+        <!-- 数据分析 -->
+    <div class="category">
+        <h2>📊 数据分析</h2>
+        <div class="example">
+            <strong>可视化分析咒语：</strong>
+            <blockquote>
+                "请对提供的数据进行所有可能类型的可视化探索分析（上传CSV文件格式数据）"
+                <button class="copy-btn" onclick="copyText(this.parentNode.textContent.trim())">复制</button>
+            </blockquote>
+            <strong>示例结果：</strong>
+            <pre>通过可视化分析发现：
+1. 高流失群体：年龄＞50岁、信用评分＜650、账户余额＞$10k的客户流失率高达42%
+2. 地理差异：德国客户流失率（28%）＞法国（15%）＞西班牙（12%）
+3. 性别差异：女性客户流失率（21%）略高于男性（18%）
+4. 活跃度：过去3个月无交易记录的客户流失率高达35%
+
+数据示例：
+ | CustomerId | Surname  | CreditScore | Geography | Gender | Age | Tenure | Balance | NmOfPrd | HasCrCard | IsActive | EstimatedSalary | Exited |
+ |------------|--------- |-------------|-----------|--------|-----|--------|---------|---------|-----------|----------|-----------------|--------|
+ | 15634602   | Hargrave | 619         | France    | Female | 42  | 2      | 0       | 1       | 1         | 1        | 101348.88       | 1      |
+
+建议：建立预警模型识别高风险客户，针对德国市场推出客户忠诚计划</pre>
+        </div>
+    </div>
+
+    <!-- 财报解析 -->
+    <div class="category">
+        <h2>📈 财报解析</h2>
+        <div class="example">
+            <strong>解析咒语：</strong>
+            <blockquote>
+                "分析XXX公司Q3财报：<br>
+                - 营收同比/环比变化及原因<br>
+                - 毛利率/净利率行业对比<br>
+                - 非经常性损益项目<br>
+                - 现金流健康状况<br>
+                - 负债结构分析<br>
+                - 流动/速动比率评估<br>
+                - ROA/ROE指标<br>
+                - 周转率行业对比<br>
+                - 经营效率变化<br>
+                - 潜在法律风险<br>
+                - 未来重大承诺"
+                <button class="copy-btn" onclick="copyText(this.parentNode.textContent.trim())">复制</button>
+            </blockquote>
+            
+            <strong>Markdown模板：</strong>
+            <pre>\`\`\`
+# XXX公司Q3财报分析
+
+## 核心财务指标
+| 指标         | 当期值 | 同比变化 | 行业平均 |
+|--------------|--------|----------|----------|
+| 营收         | $2.1B  | +15%     | +12%     |
+| 毛利率       | 42%    | -3pp     | 45%      |
+| 净现金流     | $380M  | +25%     | -        |
+
+## 关键发现
+1. **营收增长驱动因素**
+   - 新产品线贡献35%增量收入
+   - 亚太市场同比增长42%
+
+2. **负债结构**
+   - 短期负债：$500M (流动比率1.8x)
+   - 长期负债：$1.2B (资产负债率58%)
+
+3. **风险提示**
+   ![](https://via.placeholder.com/800x400?text=财务比率趋势图)
+   - 存货周转天数增加至68天（行业：55天）
+   - 存在$150M未决诉讼准备金
+\`\`\`</pre>
+        </div>
+    </div>
+
+    <!-- 行业热点 -->
+    <div class="category">
+        <h2>🌐 每日行业热点</h2>
+        <div class="example">
+            <strong>整理咒语：</strong>
+            <blockquote>
+                "请整理今日新能源行业重要动态：<br>
+                - 政策法规变化<br>
+                - 技术突破<br>
+                - 市场交易数据<br>
+                - 头部企业动向<br>
+                - 国际形势影响"
+                <button class="copy-btn" onclick="copyText(this.parentNode.textContent.trim())">复制</button>
+            </blockquote>
+            
+            <strong>示例结果：</strong>
+            <pre>📅 2023-12-01 新能源行业日报
+
+1. **政策动态**
+   - 财政部宣布延长新能源汽车购置税减免至2025年
+   - 欧盟通过《电池新规》要求2030年电池回收率达90%
+
+2. **技术创新**
+   - 宁德时代发布麒麟电池量产计划（能量密度255Wh/kg）
+
+3. **市场数据**
+   ![](https://via.placeholder.com/600x300?text=锂电材料价格趋势)
+   - 碳酸锂现货价跌破120,000元/吨（-7.2% WoW）
+
+4. **企业动向**
+   - 特斯拉上海工厂启动Model 3焕新版出口</pre>
+        </div>
+    </div>
+
+    `;
+    
+    modal.style.display = 'block';
+}
+
+// 添加复制功能
+function copyText(text) {
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            alert('已复制到剪贴板');
+        })
+        .catch(err => {
+            console.error('复制失败:', err);
+        });
+}

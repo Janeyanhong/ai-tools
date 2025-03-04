@@ -336,3 +336,145 @@ body {
     line-height: 1.6;
     margin-top: 20px;
 }
+
+/* 咒语百宝箱图标样式 */
+.treasure-box-icon {
+    background: linear-gradient(135deg, #003B90, #0066CC);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.treasure-icon {
+    font-size: 32px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 提示词样例样式 */
+.prompt-samples {
+    text-align: left;
+    padding: 10px;
+}
+
+.sample-card {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.sample-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.sample-card pre {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    font-family: 'Noto Sans SC', sans-serif;
+    margin-bottom: 10px;
+}
+
+.copy-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: var(--accent-color);
+}
+
+/* 加载中样式 */
+.loading {
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    color: #666;
+}
+
+/* 错误信息样式 */
+.error-message {
+    color: #e74c3c;
+    padding: 20px;
+    text-align: center;
+    background: #fef0f0;
+    border-radius: 8px;
+}
+
+/* 咒语百宝箱样式 */
+.category {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.category h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.example {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.example strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.example blockquote {
+    background: #fff;
+    border-left: 4px solid var(--accent-color);
+    margin: 0 0 15px 0;
+    padding: 10px 15px;
+    color: #555;
+}
+
+.example pre {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+/* 添加复制按钮 */
+.example blockquote {
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.copy-btn:hover {
+    opacity: 1;
+}
