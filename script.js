@@ -117,7 +117,12 @@ function showPromptSamples() {
         <div class="example">
             <strong>可视化分析咒语：</strong>
             <blockquote>
-                "请对提供的数据进行所有可能类型的可视化探索分析（上传CSV文件格式数据）"
+                "请对提供的数据进行所有可能类型的可视化探索分析（上传CSV文件格式数据）
+                数据示例：
+ | CustomerId | Surname  | CreditScore | Geography | Gender | Age | Tenure | Balance | NmOfPrd | HasCrCard | IsActive | EstimatedSalary | Exited |
+
+ | 15634602   | Hargrave | 619         | France    | Female | 42  | 2      | 0       | 1       | 1         | 1        | 101348.88       | 1      |
+"
                 <button class="copy-btn" onclick="copyText(this.parentNode.textContent.trim())">复制</button>
             </blockquote>
             <strong>示例结果：</strong>
@@ -127,10 +132,6 @@ function showPromptSamples() {
 3. 性别差异：女性客户流失率（21%）略高于男性（18%）
 4. 活跃度：过去3个月无交易记录的客户流失率高达35%
 
-数据示例：
- | CustomerId | Surname  | CreditScore | Geography | Gender | Age | Tenure | Balance | NmOfPrd | HasCrCard | IsActive | EstimatedSalary | Exited |
- |------------|--------- |-------------|-----------|--------|-----|--------|---------|---------|-----------|----------|-----------------|--------|
- | 15634602   | Hargrave | 619         | France    | Female | 42  | 2      | 0       | 1       | 1         | 1        | 101348.88       | 1      |
 
 建议：建立预警模型识别高风险客户，针对德国市场推出客户忠诚计划</pre>
         </div>
