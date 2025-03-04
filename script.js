@@ -225,13 +225,51 @@ function showPromptSamples() {
     modal.style.display = 'block';
 }
 
-// 添加复制功能
+// 改进的复制功能，兼容移动设备
 function copyText(text) {
-    navigator.clipboard.writeText(text)
-        .then(() => {
-            alert('已复制到剪贴板');
-        })
-        .catch(err => {
-            console.error('复制失败:', err);
-        });
+    // 创建一个临时文本区域
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    
+    // 设置样式使其不可见
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    
+    // 检测是否是iOS设备
+    const isIOS = navigator.userAgent.match(/ipad|iphone/i);
+    
+    if (isIOS) {
+        // iOS设备需要特殊处理
+        const range = document.createRange();
+        range.selectNodeContents(textArea);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+    } else {
+        // 其他设备
+        textArea.select();
+    }
+    
+    try {
+        // 尝试使用document.execCommand复制
+        const successful = document.execCommand('copy');
+        const msg = successful ? '已复制到剪贴板' : '复制失败，请手动复制';
+        alert(msg);
+    } catch (err) {
+        // 如果execCommand失败，尝试使用Clipboard API
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                alert('已复制到剪贴板');
+            })
+            .catch(err => {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制');
+            });
+    }
+    
+    // 清理
+    document.body.removeChild(textArea);
 }
